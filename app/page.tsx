@@ -1,3 +1,4 @@
+import { Button } from "./ui/components/buttons/button";
 import { LogInForm } from "./ui/components/login-form/LoginForm";
 import { Navbar } from "./ui/components/navbar/Navbar";
 
@@ -5,9 +6,13 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      {/* content */}
       <div className="flex flex-col lg:flex-row">
         <div className="m-5 md:m-10">
+          <div className="flex flex-row gap-2 sm:gap-12 mb-10 justify-center lg:hidden">
+            <Button type="form">LogIn</Button>
+            <Button type="form">SignIn</Button>
+          </div>
+
           <p className=" text-teal-900">
             {`Experience the magic of 'SnapStream,' an innovative mini app that
         empowers you to create, share, and engage with your world. Share your
@@ -16,6 +21,9 @@ export default function Home() {
         process.`}
           </p>
           <div className="hidden lg:block my-10 border border-solid border-grey-300" />
+          <span className="hidden lg:flex justify-center">
+            <Button type="home">Join Us</Button>
+          </span>
         </div>
 
         <div className="m-5 md:m-10">

@@ -1,3 +1,5 @@
+import { Button } from "../buttons/button";
+
 export const LogInForm = () => (
   <form className="hidden lg:block bg-green p-10 rounded-3xl">
     <div className="flex flex-col justify-center">
@@ -11,7 +13,9 @@ export const LogInForm = () => (
         type="password"
         placeholder="Password"
       />
-      <button className="text-white mt-10">LogIn</button>
+      <span className="flex justify-center mt-10">
+        <Button type="form">LogIn</Button>
+      </span>
       <p className="text-teal-100 flex justify-center m-5">
         Forgotten the password?
       </p>
