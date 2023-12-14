@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "./ui/components/buttons/button";
 import { LogInForm } from "./ui/components/forms/LoginForm";
 import { Navbar } from "./ui/components/navbar/Navbar";
+import { Carousel } from "./ui/components/carousel/Carousel";
 
 export default function Home() {
   return (
@@ -26,6 +27,10 @@ export default function Home() {
         process.`}
           </p>
           <div className="hidden lg:block my-10 border border-solid border-grey-300" />
+          <div className="flex justify-center m-10">
+            <Carousel />
+          </div>
+
           <span className="hidden lg:flex justify-center">
             <Button type="home">Join Us</Button>
           </span>
