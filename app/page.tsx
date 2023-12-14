@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "./ui/components/buttons/button";
 import { LogInForm } from "./ui/components/login-form/LoginForm";
 import { Navbar } from "./ui/components/navbar/Navbar";
@@ -9,7 +10,10 @@ export default function Home() {
       <div className="flex flex-col lg:flex-row">
         <div className="m-5 md:m-10">
           <div className="flex flex-row gap-2 sm:gap-12 mb-10 justify-center lg:hidden">
-            <Button type="form">LogIn</Button>
+            <Link href="/login">
+              <Button type="form">LogIn</Button>
+            </Link>
+
             <Button type="form">SignIn</Button>
           </div>
 
@@ -27,7 +31,9 @@ export default function Home() {
         </div>
 
         <div className="m-5 md:m-10">
-          <LogInForm />
+          <div className="hidden lg:block">
+            <LogInForm bgStyle="bg-green rounded-3xl" />
+          </div>
           <p className="text-teal-900 lg:mt-10">
             {`Our future plans for the application include the addition of
           mini-games. We aim to enhance the user experience by incorporating

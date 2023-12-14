@@ -1,7 +1,13 @@
+import { FC } from "react";
 import { Button } from "../buttons/button";
 
-export const LogInForm = () => (
-  <form className="hidden lg:block bg-green p-10 rounded-3xl">
+interface LogInFormProps {
+  bgStyle?: string;
+  textStyle?: string;
+}
+
+export const LogInForm: FC<LogInFormProps> = ({ bgStyle, textStyle }) => (
+  <form className={`p-10 ${bgStyle}`}>
     <div className="flex flex-col">
       <div className="flex justify-center">
         <input
@@ -20,7 +26,9 @@ export const LogInForm = () => (
       <span className="flex justify-center mt-10">
         <Button type="form">LogIn</Button>
       </span>
-      <p className="text-teal-100 flex justify-center m-5">
+      <p
+        className={`text-teal-100 flex justify-center m-5 hover:underline cursor-pointer ${textStyle}`}
+      >
         Forgotten the password?
       </p>
     </div>
