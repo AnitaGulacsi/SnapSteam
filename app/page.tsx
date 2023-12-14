@@ -32,7 +32,9 @@ export default function Home() {
           </div>
 
           <span className="hidden lg:flex justify-center">
-            <Button type="home">Join Us</Button>
+            <Link href="/signin">
+              <Button type="home">Join Us</Button>
+            </Link>
           </span>
         </div>
 
