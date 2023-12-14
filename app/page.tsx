@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "./ui/components/buttons/button";
-import { LogInForm } from "./ui/components/login-form/LoginForm";
+import { LogInForm } from "./ui/components/forms/LoginForm";
 import { Navbar } from "./ui/components/navbar/Navbar";
 
 export default function Home() {
@@ -13,8 +13,9 @@ export default function Home() {
             <Link href="/login">
               <Button type="form">LogIn</Button>
             </Link>
-
-            <Button type="form">SignIn</Button>
+            <Link href="/signin">
+              <Button type="form">SignIn</Button>
+            </Link>
           </div>
 
           <p className=" text-teal-900">
@@ -32,7 +33,10 @@ export default function Home() {
 
         <div className="m-5 md:m-10">
           <div className="hidden lg:block">
-            <LogInForm bgStyle="bg-green rounded-3xl" />
+            <LogInForm
+              bgStyle="bg-green rounded-3xl"
+              placeholderStyle="text-teal-100"
+            />
           </div>
           <p className="text-teal-900 lg:mt-10">
             {`Our future plans for the application include the addition of
