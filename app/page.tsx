@@ -1,5 +1,5 @@
-import { LogInForm } from "./components/login-form/LoginForm";
-import { Navbar } from "./components/navbar/Navbar";
+import { LogInForm } from "./ui/components/login-form/LoginForm";
+import { Navbar } from "./ui/components/navbar/Navbar";
 
 export default function Home() {
   return (
