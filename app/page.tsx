@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col xl:flex-row">
         <div className="m-5 md:m-10">
-          <div className="flex flex-row gap-2 sm:gap-12 mb-10 justify-center lg:hidden">
+          <div className="flex flex-row gap-2 sm:gap-12 mb-10 justify-center xl:hidden">
             <Link href="/login">
               <Button type="form">LogIn</Button>
             </Link>
@@ -26,12 +26,12 @@ export default function Home() {
         effortlessly, all while enjoying a seamless login and registration
         process.`}
           </p>
-          <div className="hidden lg:block my-10 border border-solid border-grey-300" />
+          <div className="hidden xl:block my-10 border border-solid border-grey-300" />
           <div className="flex justify-center m-10">
             <Carousel />
           </div>
 
-          <span className="hidden lg:flex justify-center">
+          <span className="hidden xl:flex justify-center">
             <Link href="/signin">
               <Button type="home">Join Us</Button>
             </Link>
@@ -39,7 +39,7 @@ export default function Home() {
         </div>
 
         <div className="m-5 md:m-10">
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <LogInForm
               bgStyle="bg-green rounded-3xl"
               placeholderStyle="text-teal-100"
