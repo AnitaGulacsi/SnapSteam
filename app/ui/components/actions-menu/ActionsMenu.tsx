@@ -1,4 +1,4 @@
-import { ActionItem } from "./ActionItem";
+import { ActionItem } from "../../atom/ActionItem";
 
 export const ActionsMenu = () => {
   return (
