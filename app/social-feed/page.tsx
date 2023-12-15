@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { ActionsMenu } from "../ui/components/actions-menu/ActionsMenu";
 import { Navbar } from "../ui/components/navbar/Navbar";
+import { PostCard } from "../ui/components/post-card/PostCard";
 
 export default function Page() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -16,7 +17,7 @@ export default function Page() {
         <p className="text-teal-300">Welcome</p>
         <p className="text-white">@user</p>
       </Navbar>
-      <div className="absolute m-10 hidden md:flex">
+      <div className="absolute hidden md:flex">
         <ActionsMenu />
       </div>
       {openMenu && (
@@ -25,7 +26,9 @@ export default function Page() {
         </div>
       )}
       <div className="flex justify-center h-screen">
-        <div className="bg-green text-white p-20">Post</div>
+        <div className="bg-green p-8">
+          <PostCard />
+        </div>
       </div>
     </main>
   );

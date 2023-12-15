@@ -1,8 +1,7 @@
 import { FC } from "react";
 import { Logo } from "../logo/Logo";
 import { AppName } from "../logo/AppName";
-import Image from "next/image";
-import menu from "@/public/icon/menu.svg";
+import { Menu } from "../../atom/Menu";
 
 interface NavbarProps {
   children?: React.ReactNode;
@@ -18,12 +17,7 @@ export const Navbar: FC<NavbarProps> = ({ children, onClick }) => (
           <AppName />
         </div>
       </div>
-      <button
-        className="md:hidden flex item-center justify-center"
-        onClick={onClick}
-      >
-        <Image src={menu} width={30} height={10} alt={"menu"} />
-      </button>
+      <Menu onClick={onClick} className="md:hidden" />
     </div>
     <div className="flex justify-center">
       <div className="flex flex-col justify-center mr-20">{children}</div>
