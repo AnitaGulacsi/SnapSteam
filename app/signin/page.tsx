@@ -1,4 +1,4 @@
-import { SigninForm } from "../ui/components/forms/SinginForm";
+import { SigninForm } from "../ui/components/forms/SigninForm";
 
 export default function Page() {
   return (
