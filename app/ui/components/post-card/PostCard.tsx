@@ -6,7 +6,7 @@ export const PostCard = () => {
   return (
     <div className="w-96 bg-white">
       <PostHeader />
-      <PostBody />
+      <PostBody description={"description"} location={"location"} url={"url"} />
       <PostFooter />
     </div>
   );
