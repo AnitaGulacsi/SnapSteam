@@ -17,7 +17,7 @@ export default function Page() {
         <p className="text-teal-300">Welcome</p>
         <p className="text-white">@user</p>
       </Navbar>
-      <div className="absolute hidden md:flex">
+      <div className="absolute hidden md:flex sm:m-0 lg:p-7 xl-20">
         <ActionsMenu />
       </div>
       {openMenu && (
@@ -26,7 +26,7 @@ export default function Page() {
         </div>
       )}
       <div className="flex justify-center h-screen">
-        <div className="bg-green p-8">
+        <div className="bg-green p-5 sm:p-10">
           <PostCard />
         </div>
       </div>

@@ -4,7 +4,7 @@ import { PostHeader } from "./post-header/PostHeader";
 
 export const PostCard = () => {
   return (
-    <div className="w-96 bg-white">
+    <div className="w-80 sm:w-96 bg-white">
       <PostHeader />
       <PostBody description={"description"} location={"location"} url={"url"} />
       <PostFooter />
