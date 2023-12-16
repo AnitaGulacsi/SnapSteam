@@ -3,8 +3,16 @@ import { Button } from "./ui/components/buttons/button";
 import { LogInForm } from "./ui/components/forms/LoginForm";
 import { Navbar } from "./ui/components/navbar/Navbar";
 import { Carousel } from "./ui/components/carousel/Carousel";
+import img1 from "@/public/images/app-job.png";
+import img2 from "@/public/images/apps-ios.png";
+import img3 from "@/public/images/mobile-app.png";
 
 export default function Home() {
+  const carouselItems = [
+    { imageUrl: img1 },
+    { imageUrl: img2 },
+    { imageUrl: img3 },
+  ];
   return (
     <main>
       <Navbar />
@@ -27,9 +35,9 @@ export default function Home() {
         process.`}
           </p>
           <div className="hidden xl:block my-10 border border-solid border-grey-300" />
-          <div className="flex justify-center m-10">
-            <Carousel />
-          </div>
+          {/* <div className="flex justify-center m-10"> */}
+          <Carousel items={carouselItems} />
+          {/* </div> */}
 
           <span className="hidden xl:flex justify-center">
             <Link href="/signin">
