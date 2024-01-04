@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ActionItem } from "../../atom/ActionItem";
 
 export const ActionsMenu = () => {
@@ -6,7 +7,9 @@ export const ActionsMenu = () => {
       <div className="flex flex-col gap-3">
         <ActionItem>Profile Page</ActionItem>
         <ActionItem>Take a look</ActionItem>
-        <ActionItem> Add new post</ActionItem>
+        <Link href="/new-post">
+          <ActionItem>Add new post</ActionItem>
+        </Link>
         <ActionItem>Play Games</ActionItem>
         <ActionItem>Saved</ActionItem>
         <ActionItem>Add new user</ActionItem>
