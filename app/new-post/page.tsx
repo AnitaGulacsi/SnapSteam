@@ -17,15 +17,15 @@ export default function Page() {
   return (
     <main className="bg-green flex items-center justify-center h-screen">
       <div className="bg-white flex flex-col items-center">
-        <p className="my-10">Create new post:</p>
+        <p className="my-3 sm-my-10">Create new post:</p>
         <input
-          className={`p-2 w-[400px] rounded-xl border border-teal-400 bg-transparent outline-none focus:outline-none`}
+          className={`p-2 w-[200px] sm:w-[400px] rounded-xl border border-teal-400 bg-transparent outline-none focus:outline-none`}
           type="text"
           placeholder="Description"
         />
 
         <select
-          className={`p-2 mt-5 w-[400px] rounded-xl border border-teal-400 bg-transparent outline-none focus:outline-none`}
+          className={`p-2 mt-5 w-[200px] sm:w-[400px] rounded-xl border border-teal-400 bg-transparent outline-none focus:outline-none`}
           id="options"
           onChange={handleOptionChange}
           value={selectedOption}
@@ -40,8 +40,9 @@ export default function Page() {
           ))}
         </select>
 
-        <div className="w-[500px] border m-10 flex flex-wrap bg-green">
+        <div className="w-[200px] sm:w-[500px] border m-10 flex flex-wrap bg-green">
           {TestImage.map((test) => (
+            // eslint-disable-next-line react/jsx-key
             <PhotoWidgets test={test.id} image={test.url} />
           ))}
         </div>
