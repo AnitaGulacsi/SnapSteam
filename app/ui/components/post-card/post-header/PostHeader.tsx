@@ -24,8 +24,8 @@ export const PostHeader: FC<PostHeaderProps> = ({ profileImage, username }) => {
             className="w-16 h-16 rounded-full bg-green"
             src={profileImage}
             alt={"prof-img"}
-            width={30}
-            height={10}
+            width={700}
+            height={100}
           />
           <p>{username}</p>
         </div>
