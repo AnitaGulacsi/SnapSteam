@@ -1,12 +1,27 @@
+import { FC } from "react";
 import { PostBody } from "./post-body/PostBody";
 import { PostFooter } from "./post-footer/PostFooter";
 import { PostHeader } from "./post-header/PostHeader";
 
-export const PostCard = () => {
+interface PostCardProps {
+  post: {
+    profileImage: string;
+    username: string;
+    description: string;
+    location: string;
+    url: string;
+  };
+}
+
+export const PostCard: FC<PostCardProps> = ({ post }) => {
   return (
-    <div className="w-80 sm:w-96 bg-white">
-      <PostHeader />
-      <PostBody description={"description"} location={"location"} url={"url"} />
+    <div className="w-80 sm:w-96 bg-white my-5">
+      <PostHeader profileImage={post.profileImage} username={post.username} />
+      <PostBody
+        description={post.description}
+        location={post.location}
+        url={post.url}
+      />
       <PostFooter />
     </div>
   );

@@ -1,9 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useState, FC } from "react";
 import { Menu } from "@/app/ui/atom/Menu";
 import { PostMenu } from "../post-menu/PostMenu";
+import Image from "next/image";
 
-export const PostHeader = () => {
+interface PostHeaderProps {
+  profileImage: string;
+  username: string;
+}
+
+export const PostHeader: FC<PostHeaderProps> = ({ profileImage, username }) => {
   const [openPostMenu, setOpenPostMenu] = useState(false);
 
   const handlePostMenuVisibility = () => {
@@ -14,9 +20,14 @@ export const PostHeader = () => {
     <div className="p-10">
       <div className="flex flex-row justify-between">
         <div className="flex flex-row items-center gap-2">
-          {/* user profile image */}
-          <div className="w-10 h-10 rounded-full bg-green" />
-          <p>@username</p>
+          <Image
+            className="w-16 h-16 rounded-full bg-green"
+            src={profileImage}
+            alt={"prof-img"}
+            width={30}
+            height={10}
+          />
+          <p>{username}</p>
         </div>
         <Menu onClick={handlePostMenuVisibility} />
       </div>

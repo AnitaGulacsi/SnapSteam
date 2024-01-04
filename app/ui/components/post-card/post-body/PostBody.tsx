@@ -16,7 +16,13 @@ export const PostBody: FC<PostBodyProps> = ({ description, location, url }) => {
         <Image src={location_icon} alt={"location_icon"} />
         <p className="text-ellipsis">{location}</p>
       </div>
-      <div className="mt-5">{url}</div>
+      <Image
+        className="mt-5 w-[400px] h-[400px]"
+        src={url}
+        alt={"img"}
+        width={5060}
+        height={4510}
+      />
     </div>
   );
 };
