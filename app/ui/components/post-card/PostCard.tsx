@@ -15,7 +15,7 @@ interface PostCardProps {
 
 export const PostCard: FC<PostCardProps> = ({ post }) => {
   return (
-    <div className="w-80 sm:w-96 bg-white my-5">
+    <div className="bg-white my-5">
       <PostHeader profileImage={post.profileImage} username={post.username} />
       <PostBody
         description={post.description}

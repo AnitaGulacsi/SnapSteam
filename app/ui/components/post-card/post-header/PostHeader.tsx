@@ -17,7 +17,7 @@ export const PostHeader: FC<PostHeaderProps> = ({ profileImage, username }) => {
   };
 
   return (
-    <div className="p-10">
+    <div className="p-3">
       <div className="flex flex-row justify-between">
         <div className="flex flex-row items-center gap-2">
           <Image

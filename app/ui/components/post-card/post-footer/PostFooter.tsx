@@ -5,7 +5,7 @@ import { Save } from "../../social-actions/save/Save";
 
 export const PostFooter = () => {
   return (
-    <div className="p-10">
+    <div className="p-2">
       <div className="flex justify-between">
         <div className="flex flex-row items-center gap-2">
           <Like />

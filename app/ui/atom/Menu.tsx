@@ -12,6 +12,6 @@ export const Menu: FC<MenuProp> = ({ onClick, className }) => (
     className={`flex item-center justify-center ${className}`}
     onClick={onClick}
   >
-    <Image src={menu} width={30} height={10} alt={"menu"} />
+    <Image src={menu} width={40} height={10} alt={"menu"} className="pt-3 pr-3"/>
   </button>
 );
