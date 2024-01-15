@@ -5,7 +5,6 @@ import { Navbar } from "../ui/components/navbar/Navbar";
 import { PostCard } from "../ui/components/post-card/PostCard";
 import { Menu } from "../ui/atom/Menu";
 import { PostData } from "@/app/test/post-data";
-
 export default function Page() {
   const [openMenu, setOpenMenu] = useState(false);
   const [postData, setPostData] = useState(PostData);
