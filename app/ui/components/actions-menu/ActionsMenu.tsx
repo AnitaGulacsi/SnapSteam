@@ -5,7 +5,7 @@ export const ActionsMenu = () => {
   return (
     <div className="bg-teal-100 bg-opacity-20 p-5 md:pt-10 md:pl-0 lg:p-10">
       <div className="flex flex-col gap-3">
-        <Link href={"/develop"}>
+        <Link href={"/username"}>
           <ActionItem>Profile Page</ActionItem>
         </Link>
         <ActionItem>Take a look</ActionItem>
