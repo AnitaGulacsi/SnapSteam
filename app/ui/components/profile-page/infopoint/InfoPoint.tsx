@@ -14,7 +14,7 @@ export const InfoPoint: FC<InfoPointProps> = ({
   hobby,
 }) => {
   return (
-    <div>
+    <div className="text-sm md:text-lg">
       <h4>More Information:</h4>
       <p>Job : {job}</p>
       <p>Country : {country}</p>

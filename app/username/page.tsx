@@ -28,7 +28,7 @@ export default function Page() {
             />
           ))}
 
-          <div className="px-10">
+          <div className="px-5 md:px-10">
             {UserData.map((user) =>
               user.userinfo.map((info) => (
                 <InfoPoint
