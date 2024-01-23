@@ -18,7 +18,7 @@ export const Metrics: FC<MetricsProps> = ({
   followingCounter,
 }) => {
   return (
-    <div className="bg-white flex flex-row gap-10 justify-between p-10 sm:px-24 md:justify-center">
+    <div className="flex flex-row gap-10 justify-between p-10 sm:px-24 md:justify-center">
       <div className="flex flex-col">
         <div className="h-[100px] w-[100px] bg-red-800 rounded-full" />
         <div className="flex flex-row gap-2 ml-5 xl:hidden">
