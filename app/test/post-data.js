@@ -38,3 +38,20 @@ export const PostData = [
     url: "/_next/static/media/img4.666104a2.png",
   },
 ];
+
+export const UserData = [
+  {
+    id: 1,
+    name: "Anita_g",
+    profileImage: "/_next/static/media/imgp.24882eee.png",
+    userinfo: [
+      {
+        id: "01",
+        job: "Web developer",
+        country: "Targu-Mures",
+        skills: "good leadership, communicative, quick adaptability.",
+        hobby: "horse rider",
+      },
+    ],
+  },
+];
