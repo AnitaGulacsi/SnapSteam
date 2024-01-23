@@ -43,6 +43,7 @@ export const UserData = [
   {
     id: 1,
     name: "Anita_g",
+    profileImage: "/_next/static/media/imgp.24882eee.png",
     userinfo: [
       {
         id: "01",

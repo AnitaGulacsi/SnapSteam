@@ -1,6 +1,8 @@
 import { FC } from "react";
+import Image from "next/image";
 
 interface MetricsProps {
+  profile: string;
   post: string;
   postCounter: number;
   followers: string;
@@ -10,6 +12,7 @@ interface MetricsProps {
 }
 
 export const Metrics: FC<MetricsProps> = ({
+  profile,
   post,
   postCounter,
   followers,
@@ -20,7 +23,14 @@ export const Metrics: FC<MetricsProps> = ({
   return (
     <div className="flex flex-row gap-10 justify-between p-10 sm:px-24 md:justify-center">
       <div className="flex flex-col">
-        <div className="h-[100px] w-[100px] bg-red-800 rounded-full" />
+        <Image
+          className="h-[150px] w-[150px] rounded-full"
+          src={profile}
+          alt="prof"
+          width={200}
+          height={200}
+        />
+
         <div className="flex flex-row gap-2 ml-5 xl:hidden">
           <p>{post}</p>
           <p>{postCounter}</p>
