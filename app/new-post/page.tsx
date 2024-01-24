@@ -47,7 +47,7 @@ export default function Page() {
           ))}
         </div>
         <div className="flex flex-row gap-12 m-5">
-          <Link href="/social-feed">
+          <Link href="/dashboard/social-feed">
             <Button type="form">&lt; Back </Button>
           </Link>
           <Button type="form">Create</Button>

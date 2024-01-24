@@ -7,7 +7,7 @@ export default function Page() {
       <p className="text-green-900 text-2xl">
         The website is currently under development.
       </p>
-      <Link href="/social-feed">
+      <Link href="/dashboard/social-feed">
         <Button type="form">&lt; Back </Button>
       </Link>
     </div>

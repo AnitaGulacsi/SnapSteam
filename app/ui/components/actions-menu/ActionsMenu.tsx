@@ -29,7 +29,7 @@ export const ActionsMenu: FC<ActionItemProps> = ({ type }) => {
         <Link href={"/develop"}>
           <ActionItem>Delete Profile</ActionItem>
         </Link>
-        <Link href={"./"}>
+        <Link href={"../"}>
           <ActionItem>LogOut</ActionItem>
         </Link>
       </div>
