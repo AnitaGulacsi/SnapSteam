@@ -1,15 +1,17 @@
-import { Navbar } from "../ui/components/navbar/Navbar";
-import { Metrics } from "../ui/components/profile-page/metrics/Metrics";
-import { UserData } from "../test/post-data";
-import { InfoPoint } from "../ui/components/profile-page/infopoint/InfoPoint";
-import { PostData } from "../test/post-data";
-import { ImgWidgets } from "../ui/components/profile-page/ImgWidgets";
+import { Metrics } from "../../ui/components/profile-page/metrics/Metrics";
+import { UserData } from "../../test/post-data";
+import { InfoPoint } from "../../ui/components/profile-page/infopoint/InfoPoint";
+import { PostData } from "../../test/post-data";
+import { ImgWidgets } from "../../ui/components/profile-page/ImgWidgets";
 import Link from "next/link";
+import { ActionsMenu } from "@/app/ui/components/actions-menu/ActionsMenu";
 
 export default function Page() {
   return (
     <main className="bg-green h-screen">
-      <Navbar welcome={"Welcome"} username={"@username"} />
+      <div className="absolute hidden">
+        <ActionsMenu type="Home page" />
+      </div>
       <div className="flex justify-center">
         <div className="bg-white flex flex-col">
           <Link href={"./social-feed"}>

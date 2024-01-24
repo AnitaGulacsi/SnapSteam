@@ -1,12 +1,29 @@
 import Link from "next/link";
 import { ActionItem } from "../../atom/ActionItem";
+import { FC } from "react";
 
-export const ActionsMenu = () => {
+interface ActionItemProps {
+  type: string;
+}
+
+const actionItemSwitch = (type: string) => {
+  switch (type) {
+    case "personal-page":
+      return "Home page";
+    case "home-page":
+      return "Personal page";
+    default:
+      return "";
+  }
+};
+
+export const ActionsMenu: FC<ActionItemProps> = ({ type }) => {
+  const text = actionItemSwitch(type);
   return (
     <div className="bg-teal-100 bg-opacity-20 p-5 md:pt-10 md:pl-0 lg:p-10">
       <div className="flex flex-col gap-3">
-        <Link href={"/username"}>
-          <ActionItem>Profile Page</ActionItem>
+        <Link href={"/dashboard/username"}>
+          <ActionItem>{type}</ActionItem>
         </Link>
         <ActionItem>Take a look</ActionItem>
         <Link href={"/new-post"}>
