@@ -16,7 +16,7 @@ export const PostFooter: FC<PostFooterProps> = ({ handelOpenCommentArea }) => {
         <div className="flex flex-row items-center gap-2">
           <Like />
           <Comment handelOpenCommentArea={handelOpenCommentArea} />
-          <Share />
+          {/* <Share /> */}
         </div>
         <Save />
       </div>
