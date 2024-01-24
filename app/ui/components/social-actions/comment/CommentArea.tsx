@@ -1,5 +1,5 @@
 import Image from "next/image";
-import add from "@/public/icon/share.svg";
+import send from "@/public/icon/send.svg";
 import { CommentContent } from "./CommentContent";
 import { handleFun } from "@/app/utils/types";
 import { FC } from "react";
@@ -38,7 +38,7 @@ export const CommentArea: FC<CommentAreaProps> = ({
         <Image
           className="m-2"
           onClick={handelAddComment}
-          src={add}
+          src={send}
           alt={"add"}
         />
       </div>
