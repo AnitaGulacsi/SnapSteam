@@ -7,8 +7,8 @@ interface CommentContentProps {
 
 export const CommentContent: FC<CommentContentProps> = ({ children }) => {
   return (
-    <div className="flex flex-row">
-      {children}
+    <div className="flex flex-row gap-3">
+      <div className="w-[310px]">{children}</div>
       <Like />
     </div>
   );
