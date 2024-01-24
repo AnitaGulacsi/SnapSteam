@@ -6,19 +6,7 @@ interface ActionItemProps {
   type: string;
 }
 
-const actionItemSwitch = (type: string) => {
-  switch (type) {
-    case "personal-page":
-      return "Home page";
-    case "home-page":
-      return "Personal page";
-    default:
-      return "";
-  }
-};
-
 export const ActionsMenu: FC<ActionItemProps> = ({ type }) => {
-  const text = actionItemSwitch(type);
   return (
     <div className="bg-teal-100 bg-opacity-20 p-5 md:pt-10 md:pl-0 lg:p-10">
       <div className="flex flex-col gap-3">
