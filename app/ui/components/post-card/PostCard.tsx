@@ -39,7 +39,10 @@ export const PostCard: FC<PostCardProps> = ({ post }) => {
         location={post.location}
         url={post.url}
       />
-      <PostFooter handelOpenCommentArea={handelOpenCommentArea} />
+      <PostFooter
+        handelOpenCommentArea={handelOpenCommentArea}
+        comments={comments}
+      />
       {openComArea && (
         <CommentArea
           handelAddComment={handelAddComment}

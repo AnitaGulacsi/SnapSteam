@@ -7,18 +7,25 @@ import { handleFun } from "@/app/utils/types";
 
 interface PostFooterProps {
   handelOpenCommentArea: handleFun;
+  comments: Array<string>;
 }
 
-export const PostFooter: FC<PostFooterProps> = ({ handelOpenCommentArea }) => {
+export const PostFooter: FC<PostFooterProps> = ({
+  handelOpenCommentArea,
+  comments,
+}) => {
   return (
-    <div className="p-2">
+    <div className="p-4">
       <div className="flex justify-between">
         <div className="flex flex-row items-center gap-2">
           <Like />
-          <Comment handelOpenCommentArea={handelOpenCommentArea} />
+          <Comment
+            handelOpenCommentArea={handelOpenCommentArea}
+            comments={comments}
+          />
           {/* <Share /> */}
         </div>
-        <Save />
+        {/* <Save /> */}
       </div>
     </div>
   );
