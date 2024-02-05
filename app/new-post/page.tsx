@@ -5,9 +5,13 @@ import { TestImage } from "@/app/test/dataimg";
 import { PhotoWidgets } from "../ui/widgets/photo";
 import { SetStateAction, useState } from "react";
 import { Country } from "@/app/test/dataimg";
+import { useFormState } from "react-dom";
+import { createPost } from "../lib/actions";
 
 export default function Page() {
   const [selectedOption, setSelectedOption] = useState("");
+  const initialState = { message: null, errors: {} };
+  const [state, dispatch] = useFormState(createPost, initialState);
 
   const handleOptionChange = (event: {
     target: { value: SetStateAction<string> };
@@ -16,7 +20,7 @@ export default function Page() {
   };
   return (
     <main className="bg-green flex items-center justify-center h-screen">
-      <div className="bg-white flex flex-col items-center">
+      <form action={dispatch} className="bg-white flex flex-col items-center">
         <p className="my-3 sm-my-10">Create new post:</p>
         <input
           className={`p-2 w-[200px] sm:w-[400px] rounded-xl border border-teal-400 bg-transparent outline-none focus:outline-none`}
@@ -50,9 +54,9 @@ export default function Page() {
           <Link href="/dashboard/social-feed">
             <Button type="form">&lt; Back </Button>
           </Link>
-          <Button type="form">Create</Button>
+          <Button type="form submit">Create</Button>
         </div>
-      </div>
+      </form>
     </main>
   );
 }
