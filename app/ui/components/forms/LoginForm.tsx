@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Button } from "../buttons/button";
+import Link from "next/link";
 
 interface LogInFormProps {
   bgStyle?: string;
@@ -27,9 +28,11 @@ export const LogInForm: FC<LogInFormProps> = ({
         placeholder="Password"
       />
     </div>
-    <span className="flex justify-center mt-10">
-      <Button type="form">LogIn</Button>
-    </span>
+    <Link href="dashboard/social-feed">
+      <span className="flex justify-center mt-10">
+        <Button type="form">LogIn</Button>
+      </span>
+    </Link>
     <p
       className={`text-teal-100 flex justify-center m-5 hover:underline cursor-pointer ${textStyle}`}
     >
