@@ -1,11 +1,10 @@
 import Image from "next/image";
 import send from "@/public/icon/send.svg";
 import { CommentContent } from "./CommentContent";
-import { handleFun } from "@/app/utils/types";
 import { FC } from "react";
 
 interface CommentAreaProps {
-  handelAddComment: handleFun;
+  handelAddComment: () => void;
   setAddComments: (value: string) => void;
   addComment: string;
   comments: Array<string>;

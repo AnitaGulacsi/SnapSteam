@@ -1,6 +1,6 @@
 const { db } = require("@vercel/postgres");
 const { users } = require("../app/lib/placeholder-data");
-// const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 
 async function seedUsers(client) {
   try {
@@ -20,10 +20,10 @@ async function seedUsers(client) {
     //Insert date into the "users" table
     const insertUsers = await Promise.all(
       users.map(async (user) => {
-        // const hashedPassword = await bcrypt.hash(user.password, 10);
+        const hashedPassword = await bcrypt.hash(user.password, 10);
         return client.sql`
         INSERT INTO users (id, name, email, password)
-        VALUES (${user.id}, ${user.name}, ${user.email}, ${user.password})
+        VALUES (${user.id}, ${user.name}, ${user.email}, ${user.hashedPassword})
         ON CONFLICT (id) DO NOTHING`;
       })
     );

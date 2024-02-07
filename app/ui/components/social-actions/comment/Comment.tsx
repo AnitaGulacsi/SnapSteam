@@ -1,10 +1,9 @@
 import { FC } from "react";
 import Image from "next/image";
 import comment from "@/public/icon/comment.svg";
-import { handleFun } from "@/app/utils/types";
 
 interface CommentProps {
-  handelOpenCommentArea: handleFun;
+  handelOpenCommentArea: () => void;
   comments: Array<string>;
 }
 
