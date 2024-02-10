@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 
 async function seedUsers(client) {
   try {
-    await client.sql`CREATE EXTENSIONS IF NOT EXISTS "uuid-ossp"`;
+    await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
 
     //Create users table if it doesn't exists
     const createTable = await client.sql`
@@ -15,15 +15,13 @@ async function seedUsers(client) {
             password TEXT NOT NULL
         );`;
 
-    console.log("create users table");
-
     //Insert date into the "users" table
     const insertUsers = await Promise.all(
       users.map(async (user) => {
         const hashedPassword = await bcrypt.hash(user.password, 10);
         return client.sql`
         INSERT INTO users (id, name, email, password)
-        VALUES (${user.id}, ${user.name}, ${user.email}, ${user.hashedPassword})
+        VALUES (${user.id}, ${user.name}, ${user.email}, ${hashedPassword})
         ON CONFLICT (id) DO NOTHING`;
       })
     );
