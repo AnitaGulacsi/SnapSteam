@@ -15,7 +15,7 @@ export default function Home() {
               <Button type="form">LogIn</Button>
             </Link>
             <Link href="/registration">
-              <Button type="form">SignIn</Button>
+              <Button type="form">Registration</Button>
             </Link>
           </div>
 
@@ -32,7 +32,7 @@ export default function Home() {
           </div>
 
           <span className="hidden xl:flex justify-center">
-            <Link href="/signin">
+            <Link href="/registration">
               <Button type="home">Join Us</Button>
             </Link>
           </span>
