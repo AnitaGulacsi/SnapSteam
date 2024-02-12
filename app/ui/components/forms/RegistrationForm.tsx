@@ -80,7 +80,7 @@ export const RegistrationForm = () => {
       <span className="flex justify-center mt-10">
         <Button type="form">SignIn</Button>
       </span>
-      <div className="mt-5 flex flex-col gap-5">
+      {/* <div className="mt-5 flex flex-col gap-5">
         <div className="flex justify-center">
           <Button type="social">Sign In Whit Facebook</Button>
         </div>
@@ -90,7 +90,7 @@ export const RegistrationForm = () => {
         <div className="flex justify-center">
           <Button type="social">Sign In With Google</Button>
         </div>
-      </div>
+      </div> */}
     </form>
   );
 };
