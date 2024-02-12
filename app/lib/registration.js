@@ -2,21 +2,30 @@ import { sql } from "@vercel/postgres";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    const { username, email, password } = req.body;
+    const { username, email, password, confirmPassword } = req.body;
 
-    // Validate input data, e.g., check if username and email are not empty
+    // Check if all fields are filled
+    if (!username || !email || !password || !confirmPassword) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+
+    // Check if passwords match
+    if (password !== confirmPassword) {
+      return res.status(400).json({ message: "Passwords do not match" });
+    }
 
     try {
+      // Save the data to the database
       await sql`
         INSERT INTO users (username, email, password)
         VALUES (${username}, ${email}, ${password})
       `;
-      res.status(200).json({ message: "User registered successfully!" });
+      return res.status(200).json({ message: "User registered successfully!" });
     } catch (error) {
       console.error("Error registering user:", error);
-      res.status(500).json({ message: "Failed to register user" });
+      return res.status(500).json({ message: "Failed to register user" });
     }
   } else {
-    res.status(405).json({ message: "Method Not Allowed" });
+    return res.status(405).json({ message: "Method Not Allowed" });
   }
 }
