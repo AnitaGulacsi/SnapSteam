@@ -16,5 +16,7 @@ export async function POST(request: Request) {
         VALUES (uuid_generate_v4(), ${username}, ${email}, ${password})
     `;
 
+  await client.end();
+
   return Response.json(res);
 }
