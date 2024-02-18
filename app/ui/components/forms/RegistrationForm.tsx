@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
 import { Button } from "../buttons/button";
+import { useRouter } from "next/navigation";
 
 export const RegistrationForm = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -13,12 +15,13 @@ export const RegistrationForm = () => {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
+    console.log(formData);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("/lib/registration", {
+      const response = await fetch("/api/registration", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -26,7 +29,7 @@ export const RegistrationForm = () => {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        console.log("User registered successfully!");
+        router.push("/dashboard/social-feed");
       } else {
         console.error("Failed to register user");
       }
@@ -78,7 +81,7 @@ export const RegistrationForm = () => {
         />
       </div>
       <span className="flex justify-center mt-10">
-        <Button type="form">SignIn</Button>
+        <Button type="form">Done</Button>
       </span>
       {/* <div className="mt-5 flex flex-col gap-5">
         <div className="flex justify-center">

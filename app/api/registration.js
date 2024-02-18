@@ -1,6 +1,9 @@
 import { sql } from "@vercel/postgres";
+const { db } = require("@vercel/postgres");
 
 export default async function handler(req, res) {
+  console.log("here");
+  const client = await db.connect();
   if (req.method === "POST") {
     const { username, email, password, confirmPassword } = req.body;
 
@@ -15,8 +18,10 @@ export default async function handler(req, res) {
     }
 
     try {
+      await client.connect();
+      console.log("here");
       // Save the data to the database
-      await sql`
+      await client.sql`
         INSERT INTO users (username, email, password)
         VALUES (${username}, ${email}, ${password})
       `;
